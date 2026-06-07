@@ -1,0 +1,2 @@
+company_name,ticker,ipo_date,sector,ipo_price,first_day_close,30d_close,market_cap_at_ipo,ipo_size_bn,price_to_sales,revenue_growth_yoy,profitability,oversubscription_ratio,institutional_demand_score,vix_at_ipo,nasdaq_30d_return,fed_rate,google_trend_peak,news_sentiment_7d,reddit_mentions_7d,first_day_return,30d_return,above_issue_30d
+SpaceX,SPCX,2026-06-12,Aerospace,100,,,350,15,12,25,1,,,20,5,4.5,,,,,,

@@ -1,0 +1,11 @@
+company_name,ticker,ipo_date,sector,ipo_price,first_day_close,30d_close,market_cap_at_ipo,ipo_size_bn,price_to_sales,revenue_growth_yoy,profitability,oversubscription_ratio,institutional_demand_score,vix_at_ipo,nasdaq_30d_return,fed_rate,google_trend_peak,news_sentiment_7d,reddit_mentions_7d,first_day_return,30d_return,above_issue_30d
+Company_0,CMP0,2026-01-01,Tech,33,,,505,35,17,71,0,,,25,-5,4.5,,,,,,
+Company_1,CMP1,2026-01-01,Tech,90,,,528,2,24,65,0,,,28,-3,4.5,,,,,,
+Company_2,CMP2,2026-01-01,Healthcare,114,,,488,12,5,15,1,,,28,-3,4.5,,,,,,
+Company_3,CMP3,2026-01-01,Energy,75,,,719,5,25,49,0,,,29,-7,4.5,,,,,,
+Company_4,CMP4,2026-01-01,Fintech,191,,,654,16,17,79,1,,,33,-7,4.5,,,,,,
+Company_5,CMP5,2026-01-01,Energy,69,,,924,41,22,31,1,,,28,0,4.5,,,,,,
+Company_6,CMP6,2026-01-01,Healthcare,90,,,610,49,16,59,0,,,24,-6,4.5,,,,,,
+Company_7,CMP7,2026-01-01,Healthcare,19,,,735,21,10,8,1,,,28,8,4.5,,,,,,
+Company_8,CMP8,2026-01-01,Fintech,96,,,788,5,10,72,1,,,20,-9,4.5,,,,,,
+Company_9,CMP9,2026-01-01,Healthcare,108,,,321,11,28,60,0,,,20,-10,4.5,,,,,,
