@@ -33,6 +33,7 @@ A synthetic IPO dataset was generated including:
 
 Target variable:
 - `ipo_success`: whether the stock outperformed issue price after 30 days
+- Dataset IPO success rate: **29.6%** (class imbalance noted)
 
 ---
 
@@ -50,10 +51,10 @@ These features capture both company-level fundamentals and macroeconomic environ
 
 ## 🤖 Models
 
-| Model | Role |
-|-------|------|
-| Logistic Regression | Baseline |
-| Random Forest | Final model |
+| Model | Role | Accuracy |
+|-------|------|----------|
+| Logistic Regression | Baseline | 0.72 |
+| Random Forest | Final model | 0.73 |
 
 Evaluation includes:
 - Accuracy & Classification Report
@@ -64,23 +65,32 @@ Evaluation includes:
 
 ## 📈 Key Results
 
-- Realistic model accuracy: **~0.66** (under noisy conditions)
+- Logistic Regression Accuracy: **0.72**
+- Random Forest Accuracy: **0.73**
+- Model accuracy under noisy conditions: **0.68 – 0.73**
+- IPO success rate in dataset: **29.6%** (class imbalance noted)
 - Strongest predictors:
   - NASDAQ 3-month return
   - Revenue growth
   - Macro stress indicators
 
-**Feature Importance:**
+> ⚠️ Note: Due to class imbalance (30% success rate), the model shows higher precision on non-success cases (recall = 0.96) vs success cases (recall = 0.20). Future work includes SMOTE or class-weight adjustment.
 
+**Feature Importance:**
 ![Feature Importance](notebooks/feature_importance.png)
 
-**Robustness Under Noise:**
+**Confusion Matrix:**
+![Confusion Matrix](notebooks/confusion_matrix.png)
 
+**ROC Curve:**
+![ROC Curve](notebooks/roc_curve.png)
+
+**Robustness Under Noise:**
 ![Robustness Test](notebooks/robustness_test.png)
 
 ---
 
-## 🧪 SpaceX Case Study
+## 🚀 SpaceX Scenario Analysis
 
 A hypothetical SpaceX IPO scenario is analyzed using the trained framework to compare against historical IPO patterns.
 
@@ -91,7 +101,17 @@ Assumed inputs:
 - VIX at IPO: 16 (calm market)
 - Sentiment score: 0.75 (high public enthusiasm)
 
+**Model Prediction:**
+- Predicted outcome: ✅ SUCCESS
+- Success probability: **62.40%**
+
 This demonstrates how the model can be used for **case-based financial reasoning**, not just prediction.
+
+**SpaceX vs Historical IPO Benchmarks:**
+![SpaceX Radar](notebooks/spacex_radar.png)
+
+**Success Probability vs Market VIX:**
+![SpaceX What-if](notebooks/spacex_whatif_vix.png)
 
 ---
 
@@ -129,7 +149,11 @@ ipo-intelligence-framework/
 ├── notebooks/
 │   ├── 02_ipo_intelligence_clean.ipynb
 │   ├── feature_importance.png
-│   └── robustness_test.png
+│   ├── confusion_matrix.png
+│   ├── roc_curve.png
+│   ├── robustness_test.png
+│   ├── spacex_radar.png
+│   └── spacex_whatif_vix.png
 ├── requirements.txt
 └── README.md
 
@@ -138,8 +162,8 @@ ipo-intelligence-framework/
 ## 🔭 Future Work (Post-IPO Update)
 
 - [ ] Replace synthetic data with real SpaceX IPO data post-listing
+- [ ] Address class imbalance using SMOTE or class-weight adjustment
 - [ ] Add SHAP values for model interpretability
 - [ ] Expand to multi-class prediction (outperform / neutral / underperform)
 - [ ] Add sector comparison (aerospace vs tech IPOs)
 - [ ] Build interactive dashboard for scenario analysis
-
