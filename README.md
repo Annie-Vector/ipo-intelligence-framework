@@ -103,7 +103,7 @@ Assumed inputs:
 
 **Model Prediction:**
 - Predicted outcome: ✅ SUCCESS
-- Success probability: **62.40%**
+- Estimated success probability: approximately 60%
 
 This demonstrates how the model can be used for **case-based financial reasoning**, not just prediction.
 
